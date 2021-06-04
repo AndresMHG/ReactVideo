@@ -10,11 +10,10 @@ import '../assets/styles/App.scss';
 
 const API = 'http://localhost:3002/initalState';
 
-const App = () => {
+const Home = () => {
     const initialState = useInitialState(API);
     return (
-        <div className="App">
-            <Header />
+        <React.Fragment>
             <Search />
             {
                 initialState.mylist.lenght > 0 &&
@@ -43,10 +42,7 @@ const App = () => {
                     }
                 </Carousel>
             </Categories>
-
-            <Footer />
-
-        </div>
+        </React.Fragment>
     )
 };
-export default App;
+export default Home;
