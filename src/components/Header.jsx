@@ -15,8 +15,14 @@ const Header = () => (
                 <p>Perfil</p>
             </div>
             <ul>
-                <li><a href="/">Cuenta</a></li>
-                <li><a href="/">Cerrar Sesión</a></li>
+                <li>
+                    <a href="/">Cuenta</a>
+                </li>
+                <li>
+                    <Link to="/login">
+                        Iniciar sesión
+                    </Link>
+                </li>
             </ul>
         </div>
     </header>
