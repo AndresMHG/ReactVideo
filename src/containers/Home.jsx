@@ -10,14 +10,19 @@ const Home = ({ myList, trends, originals }) => {
     return (
         <React.Fragment>
             <Search />
-            {
-                myList.lenght > 0 &&
+
+            {myList.length > 0 &&
                 <Categories title="Mi lista">
                     <Carousel>
-                        <CarouselItem />
+                        {
+                            myList.map(item =>
+                                <CarouselItem key={item.id} {...item} />
+                            )
+                        }
                     </Carousel>
-                </Categories>
+            </Categories>
             }
+            
             <Categories title="Tendencias">
                 <Carousel>
                     {
